@@ -59,8 +59,25 @@ var discountTimeStart = Number(prompt("Введіть час початку ді
 var discountTimeEnd = Number(prompt("Введіть час закінчення дії знишки", 9));
 var presentTime = Number(prompt("Введіть теперішній час", 9));
 console.log(typeof presentTime);
-var messageDiscountsApply =
-  presentTime <= discountTimeEnd && presentTime >= discountTimeStart
-    ? "Зараз діє знижка"
-    : "Зараз знижка не діє ";
+var messageDiscountsApply;
+if (
+  presentTime <= 24 &&
+  presentTime >= 0 &&
+  (discountTimeEnd <= 24 && discountTimeEnd >= 0) &&
+  (discountTimeStart <= 24 && discountTimeStart >= 0)
+) {
+  if (discountTimeStart <= discountTimeEnd) {
+    messageDiscountsApply =
+      presentTime <= discountTimeEnd && presentTime >= discountTimeStart
+        ? "Зараз діє знижка"
+        : "Зараз знижка не діє ";
+  } else {
+    messageDiscountsApply =
+      presentTime >= discountTimeEnd && presentTime <= discountTimeStart
+        ? "Зараз знижка не діє"
+        : "Зараз діє знижка";
+  }
+} else {
+  messageDiscountsApply = "ви ввели невалідний формат даних";
+}
 console.log(messageDiscountsApply);
