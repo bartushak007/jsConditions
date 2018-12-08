@@ -58,7 +58,6 @@ if (stepan && nik && anna) {
 var discountTimeStart = Number(prompt("Введіть час початку дії знишки", 9));
 var discountTimeEnd = Number(prompt("Введіть час закінчення дії знишки", 9));
 var presentTime = Number(prompt("Введіть теперішній час", 9));
-console.log(typeof presentTime);
 var messageDiscountsApply;
 if (
   presentTime <= 24 &&
