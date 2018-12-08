@@ -60,19 +60,18 @@ var discountTimeEnd = Number(prompt("Введіть час закінчення 
 var presentTime = Number(prompt("Введіть теперішній час", 9));
 var messageDiscountsApply;
 if (
-  presentTime <= 24 &&
-  presentTime >= 0 &&
+  (presentTime <= 24 && presentTime >= 0 &&)
   (discountTimeEnd <= 24 && discountTimeEnd >= 0) &&
   (discountTimeStart <= 24 && discountTimeStart >= 0)
 ) {
   if (discountTimeStart <= discountTimeEnd) {
     messageDiscountsApply =
-      presentTime <= discountTimeEnd && presentTime >= discountTimeStart
+      (presentTime <= discountTimeEnd && presentTime >= discountTimeStart)
         ? "Зараз діє знижка"
         : "Зараз знижка не діє ";
   } else {
     messageDiscountsApply =
-      presentTime >= discountTimeEnd && presentTime <= discountTimeStart
+      (presentTime >= discountTimeEnd && presentTime <= discountTimeStart)
         ? "Зараз знижка не діє"
         : "Зараз діє знижка";
   }
