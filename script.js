@@ -1,19 +1,19 @@
 var ourCoursesName = "Mate Academy";
-var ourCoursesNameList = ["java", "front end", "full stack"];
+var ourCoursesGroupNameList = ["java", "front end", "full stack"];
 var ourGroupName = "fe_oct18";
 var ourGroupStudentsNameList = ["Anton", "Yura", "Alina"];
 
-var sumMoney = prompt("Скільки у вас є грошей?", 0);
+var sumMoney = Number(prompt("Скільки у вас є грошей?", 0));
 var areYouConfirm;
 if (sumMoney >= 100) {
   areYouConfirm = confirm("Ви можете купити БігМакМеню. Бажаєте?")
     ? alert("Ви замовили БігМакМеню")
     : alert("Ви нічого не замовили");
-} else if (sumMoney >= 50 && sumMoney < 100) {
+} else if (sumMoney >= 50) {
   areYouConfirm = confirm("Ви можете купити Чізбургер і картоплю. Бажаєте?")
     ? alert("Ви замовили Чізбургер і картоплю")
     : alert("Ви нічого не замовили");
-} else if (sumMoney < 50 && sumMoney >= 20) {
+} else if (sumMoney >= 20) {
   areYouConfirm = confirm("Ви можете купити колу. Бажаєте?")
     ? alert("Ви замовили колу")
     : alert("Ви нічого не замовили");
@@ -25,11 +25,11 @@ if (sumMoney >= 100) {
   areYouConfirm = confirm("Ви можете купити БігМакМеню. Бажаєте?")
     ? console.log("Ви замовили БігМакМеню")
     : console.log("Ви нічого не замовили");
-} else if (sumMoney >= 50 && sumMoney < 100) {
+} else if (sumMoney >= 50) {
   areYouConfirm = confirm("Ви можете купити Чізбургер і картоплю. Бажаєте?")
     ? console.log("Ви замовили Чізбургер і картоплю")
     : console.log("Ви нічого не замовили");
-} else if (sumMoney < 50 && sumMoney >= 20) {
+} else if (sumMoney >= 20) {
   areYouConfirm = confirm("Ви можете купити колу. Бажаєте?")
     ? console.log("Ви замовили колу")
     : console.log("Ви нічого не замовили");
